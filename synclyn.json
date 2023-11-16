@@ -1,0 +1,4 @@
+{
+  "from": "node:18",
+  "run": "node index.js"
+}
