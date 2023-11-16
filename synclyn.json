@@ -1,4 +1,4 @@
 {
   "from": "node:18",
-  "run": "node index.js"
+  "run": "npm install && node index.js"
 }
