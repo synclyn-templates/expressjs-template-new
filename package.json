@@ -1,0 +1,22 @@
+{
+  "name": "nodejs-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/synclyn-templates/nodejs-template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/synclyn-templates/nodejs-template/issues"
+  },
+  "homepage": "https://github.com/synclyn-templates/nodejs-template#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
