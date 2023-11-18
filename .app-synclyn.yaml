@@ -1,5 +1,4 @@
-app: node
-version: 18
+app: node:18
 
 run:
   - npm install
