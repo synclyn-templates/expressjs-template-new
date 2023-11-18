@@ -1,0 +1,6 @@
+app: node
+version: 18
+
+run:
+  - npm install
+  - node index.js
