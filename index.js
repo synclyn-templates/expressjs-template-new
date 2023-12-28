@@ -7,27 +7,15 @@ app.get('/', (req, res) => {
 });
 
 app.get('/stresser', (req, res) => {
-    let arraySize = 134217728;  //~ 1GB
-    let largeArray = new Array(arraySize).fill().map(() => Math.random());
+    let n = 40;
+    let fibonacci = (num) => {
+        if (num <= 1) return 1;
+        return fibonacci(num - 1) + fibonacci(num - 2);
+    };
+    let fibResult = fibonacci(n);
 
-    let sumOfElements = largeArray.reduce((acc, val) => acc + val, 0);
 
-    let maxNumber = 100000;
-    let primes = [];
-    for (let i = 2; i < maxNumber; i++) {
-        let isPrime = true;
-        for (let j = 2; j < i; j++) {
-            if (i % j === 0) {
-                isPrime = false;
-                break;
-            }
-        }
-        if (isPrime) {
-            primes.push(i);
-        }
-    }
-
-    res.send(`Hello World! Die Summe der Elemente ist: ${sumOfElements}. Gefundene Primzahlen: ${primes.length}`);
+    res.send(`Die Fibonacci-Zahl an der Stelle ${n} ist: ${fibResult}`);
 });
 
 app.listen(port, () => {
