@@ -7,7 +7,7 @@ app.get('/', (req, res) => {
     let largeArray = new Array(arraySize).fill().map(() => Math.random());
     let sumOfElements = largeArray.reduce((acc, val) => acc + val, 0);
 
-    res.send('Hello World!');
+    res.send(largeArray);
 });
 
 app.listen(port, () => {
