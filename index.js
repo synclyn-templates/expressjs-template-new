@@ -7,15 +7,36 @@ app.get('/', (req, res) => {
 });
 
 app.get('/stresser', (req, res) => {
-    let n = 40;
-    let fibonacci = (num) => {
-        if (num <= 1) return 1;
-        return fibonacci(num - 1) + fibonacci(num - 2);
-    };
-    let fibResult = fibonacci(n);
+ const startTime = Date.now();
+    let result = 0;
+    let primeCount = 0;
 
+    // Rechenintensive Operation: Prüfen, ob eine Zahl eine Primzahl ist
+    const isPrime = (num) => {
+        for (let i = 2, s = Math.sqrt(num); i <= s; i++)
+            if (num % i === 0) return false; 
+        return num > 1;
+    }
 
-    res.send(`Die Fibonacci-Zahl an der Stelle ${n} ist: ${fibResult}`);
+    // Eine Schleife, die rechenintensive Operationen ausführt
+    while (true) {
+        result++; // Zähler erhöhen
+
+        // Prüfen, ob die aktuelle Zahl eine Primzahl ist
+        if (isPrime(result)) {
+            primeCount++;
+        }
+
+        // Berechnen der vergangenen Zeit
+        const elapsedTime = (Date.now() - startTime) / 1000; // Zeit in Sekunden
+
+        // Beenden der Schleife, wenn die Zeit zwischen 30 und 50 Sekunden liegt
+        if (elapsedTime > 30 && elapsedTime < 50) {
+            break;
+        }
+    }
+
+    res.send(`CPU wurde für ca. ${Math.round((Date.now() - startTime) / 1000)} Sekunden ausgelastet. Anzahl der gefundenen Primzahlen: ${primeCount}`);
 });
 
 app.listen(port, () => {
