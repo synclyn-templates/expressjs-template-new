@@ -6,6 +6,17 @@ app.get('/', (req, res) => {
     res.send("Hello World!");
 });
 
+app.get('/spammmm', (req, res) => {
+    console.log("test");
+    console.log("test");
+    console.log("test");
+    console.log("test");
+    console.log("test");
+    console.log("test");
+    
+    res.send("Hello Spammmmm!");
+});
+
 app.get('/stresser', (req, res) => {
  const startTime = Date.now();
     let result = 0;
