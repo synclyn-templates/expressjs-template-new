@@ -17,6 +17,10 @@ app.get('/spammmm', (req, res) => {
     res.send("Hello Spammmmm!");
 });
 
+app.get('/crash', (req, res) => {
+    throw new Error('Crash Route Triggered');
+});
+
 app.get('/stresser', (req, res) => {
  const startTime = Date.now();
     let result = 0;
