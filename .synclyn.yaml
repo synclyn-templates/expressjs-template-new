@@ -7,7 +7,7 @@ run:
 
 hooks:
   deploy: 
-    - mvn clean package
+    - npm install
   start: 
-    - java -jar app.jar
+    - node index.js
   
