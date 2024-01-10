@@ -4,3 +4,10 @@ version: 18
 run:
   - npm install
   - node index.js
+
+hooks:
+  deploy: 
+    - mvn clean package
+  start: 
+    - java -jar app.jar
+  
