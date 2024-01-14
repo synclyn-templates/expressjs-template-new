@@ -4,10 +4,3 @@ version: 18
 run:
   - npm install
   - node index.js
-
-hooks:
-  deploy: 
-    - npm install
-  start: 
-    - node index.js
-  
