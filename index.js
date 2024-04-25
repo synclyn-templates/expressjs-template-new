@@ -2,7 +2,14 @@ const express = require('express');
 const app = express();
 const port = 80;
 
+const apps = express();
+const ports = 88;
+
 app.get('/', (req, res) => {
+    res.send("Hello World!!!");
+});
+
+apps.get('/', (req, res) => {
     res.send("Hello World!!!");
 });
 
@@ -55,5 +62,10 @@ app.get('/stresser', (req, res) => {
 });
 
 app.listen(port, () => {
+    console.log(`Example app listening at http://localhost:${port}`);
+});
+
+
+apps.listen(ports, () => {
     console.log(`Example app listening at http://localhost:${port}`);
 });
