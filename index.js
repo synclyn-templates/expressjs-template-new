@@ -3,10 +3,10 @@ const app = express();
 const port = 80;
 
 app.get('/', (req, res) => {
-    res.send("Hello World! 555kljh55");
+    res.send("Hello World!");
 });
 
-app.get('/spammmm', (req, res) => {
+app.get('/spam', (req, res) => {
     console.log("test");
     console.log("test");
     console.log("test");
