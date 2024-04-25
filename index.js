@@ -6,11 +6,11 @@ const apps = express();
 const ports = 88;
 
 app.get('/', (req, res) => {
-    res.send("Hello World!!!");
+    res.send("Hello World!!! Port: 80");
 });
 
 apps.get('/', (req, res) => {
-    res.send("Hello World!!!");
+    res.send("Hello World!!! Port: 88");
 });
 
 app.get('/spam', (req, res) => {
