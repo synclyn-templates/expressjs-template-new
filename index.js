@@ -17,9 +17,6 @@ app.get('/spam', (req, res) => {
     console.log("test");
     console.log("test");
     console.log("test");
-    console.log("test");
-    console.log("test");
-    console.log("test");
     
     res.send("Hello Spammmmm!");
 });
